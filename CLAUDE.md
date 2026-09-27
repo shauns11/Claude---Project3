@@ -90,11 +90,15 @@ Notes:
 
 ### What is tracked
 
-- Tracked: `code\` (python notebooks), `CLAUDE.md`, `.gitignore`, and any non-ignored files in `output\` (e.g. tables, figures)
+- Tracked: `code\` (python notebooks), `CLAUDE.md`, `.gitignore`, `.vscode\settings.json` (VS Code workspace settings), and any non-ignored files in `output\` (e.g. tables, figures)
 - Ignored (see `.gitignore`):
   - `*.dta` — Stata datasets, anywhere in the project
   - `*.rds` — R datasets, anywhere in the project
   - `*.txt` — log files, anywhere in the project (so logs in `output\` are not pushed)
+  - `*.parquet` — Parquet datasets, anywhere in the project (e.g. `output\df1.parquet`)
+  - `*.py` — Python scripts, anywhere in the project (the `.py` files made by `nbconvert` are regenerated on each run; the `.ipynb` notebooks are the source)
+  - `.venv\` — the virtual environment (ignored by its own internal `.gitignore`)
+- If `output\` holds only ignored files, Git skips the folder entirely; it will appear once a tracked file type (e.g. `.csv`, `.png`) is added.
 
 ### First-time setup
 
