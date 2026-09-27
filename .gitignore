@@ -1,0 +1,10 @@
+# Stata datasets (anywhere in the project)
+*.dta
+# R datasets (anywhere in the project)
+*.rds
+# log files (anywhere in the project)
+*.txt
+# Parquet (anywhere in the project)
+*.parquet
+# Python scripts (anywhere in the project)
+*.py
