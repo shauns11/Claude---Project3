@@ -8,3 +8,5 @@
 *.parquet
 # Python scripts (anywhere in the project)
 *.py
+# Papermill output notebooks
+output/*.ipynb
